@@ -35,6 +35,9 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+
+    max-width: 1110px;
+    margin-inline: auto;
 }
 
 header button {
@@ -74,6 +77,11 @@ header .mobile a {
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
+}
+
+main {
+    max-width: 1110px;
+    margin-inline: auto;
 }
 
 .primeira-secao{
@@ -175,8 +183,51 @@ header .mobile a {
     color: var(--gunmental);
 }
 
-@midia(min-width: 1110px); {
+@media(min-width: 1110px); {
     header > button {
         display: none;
     }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .primeira-secao {
+        grid-column: 1 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .primeira-secao picture {
+        grid-column: 1 / 3;
+    }
+
+    .primeira-secao img {
+        margin: 0;
+    }
+
+    .primeira-secao h1 {
+        font-size: 3.5rem;
+    }
+
+    .segunda-secao h2 {
+        font-size: 2.5rem;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a{
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmental);
+    }
 }
+
